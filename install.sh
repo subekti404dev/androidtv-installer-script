@@ -15,7 +15,7 @@ busybox unzip /data/local/tmp/apps.zip -d /data/local/tmp/apps
 rm -rf /data/local/tmp/apps/__MACOSX
 
 echo "## Installing Apks !!!"
-find /data/local/tmp/apps -name "*.apk" -print0 | while IFS= read -r -d '' apk; do
+for apk in $(find /data/local/tmp/apps -name "*.apk"); do
     echo "Installing: $apk"
     pm install "$apk"
 done
