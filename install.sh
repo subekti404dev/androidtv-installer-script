@@ -5,7 +5,7 @@ if ! grep -q "20.205.243.166 github.com" /etc/hosts ; then
 fi
 
 echo "## Downloading Apks !!!"
-wget http://github.com/subekti404dev/androidtv-installer-script/raw/refs/heads/main/apps.zip -P /data/local/tmp/
+wget https://file.uripsub.dev/api/public/dl/MdEH6zB5/urip/apps/apps.zip -P /data/local/tmp/
 
 ls -lah /data/local/tmp
 
