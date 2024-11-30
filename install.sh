@@ -5,7 +5,7 @@ if ! grep -q "20.205.243.166 github.com" /etc/hosts ; then
 fi
 
 echo "## Downloading Apks !!!"
-wget https://github.com/subekti404dev/androidtv-installer-script/raw/refs/heads/main/apps.zip -P /data/local/tmp/
+wget http://github.com/subekti404dev/androidtv-installer-script/raw/refs/heads/main/apps.zip -P /data/local/tmp/
 
 ls -lah /data/local/tmp
 
@@ -26,5 +26,5 @@ do
 done
 
 echo "## Cleaning Up !!!"
-# rm -rf /sdcard/urip_apps
+rm -rf /sdcard/urip_apps
 rm -rf /data/local/tmp/apps.zip
