@@ -12,9 +12,10 @@ ls -lah /data/local/tmp
 echo "## Unzipping Apks !!!"
 mkdir /data/local/tmp/apps
 busybox unzip /data/local/tmp/apps.zip -d /data/local/tmp/apps
+rm -rf /data/local/tmp/apps/__MACOSX
 
 echo "## Installing Apks !!!"
-find /data/local/tmp/apps -type f -name "*.apk" -not -path '*/__MACOSX/*' | while read apk; do
+for apk in /data/local/tmp/apps/*.apk; do
     pm install "$apk"
 done
 
