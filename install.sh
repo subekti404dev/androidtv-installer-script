@@ -17,6 +17,7 @@ rm -rf /data/local/tmp/apps/__MACOSX
 ls -la /sdcard/urip_apps
 
 echo "## Installing Apks !!!"
+echo "sdcard/urip_apps/*.apk"
 for file in /sdcard/urip_apps/*.apk
 do
     echo "Installing $file:"
@@ -25,5 +26,5 @@ do
 done
 
 echo "## Cleaning Up !!!"
-rm -rf /sdcard/urip_apps
+# rm -rf /sdcard/urip_apps
 rm -rf /data/local/tmp/apps.zip
