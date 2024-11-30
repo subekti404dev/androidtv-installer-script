@@ -36,7 +36,7 @@ mkdir /sdcard/urip_apps_data
 busybox unzip /data/local/tmp/apps-data.zip -d /sdcard/urip_apps_data
 
 echo "# Move to Apps Data to /data/data"
-mv -f /sdcard/urip_apps_data/* /data/data
+mv -f /sdcard/urip_apps_data/* /data/data/
 
 echo "## Cleaning Up !!!"
 rm -rf /sdcard/urip_apps
