@@ -10,14 +10,14 @@ wget https://github.com/subekti404dev/androidtv-installer-script/raw/refs/heads/
 ls -lah /data/local/tmp
 
 echo "## Unzipping Apks !!!"
-mkdir /data/local/tmp/apps
-busybox unzip /data/local/tmp/apps.zip -d /data/local/tmp/apps
+mkdir /sdcard/urip_apps
+busybox unzip /data/local/tmp/apps.zip -d /sdcard/urip_apps
 rm -rf /data/local/tmp/apps/__MACOSX
 
-ls -la /data/local/tmp/apps
+ls -la /sdcard/urip_apps
 
 echo "## Installing Apks !!!"
-for file in /data/local/tmp/apps/*.apk
+for file in /sdcard/urip_apps/*.apk
 do
     echo "Installing $file:"
 
@@ -25,5 +25,5 @@ do
 done
 
 echo "## Cleaning Up !!!"
-rm -rf /data/local/tmp/apps
+rm -rf /sdcard/urip_apps
 rm -rf /data/local/tmp/apps.zip
