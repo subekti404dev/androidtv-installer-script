@@ -14,13 +14,14 @@ mkdir /data/local/tmp/apps
 busybox unzip /data/local/tmp/apps.zip -d /data/local/tmp/apps
 rm -rf /data/local/tmp/apps/__MACOSX
 
+ls -la /data/local/tmp/apps
+
 echo "## Installing Apks !!!"
-find /data/local/tmp/apps -name "*.apk" -exec sh -c '
-    for apk do
-        echo "Installing: $apk"
-        pm install "$apk"
-    done
-' sh {} +
+for file in /data/local/tmp/apps/*.apk
+do
+    echo "Installing $file"
+    pm install $file
+done
 
 echo "## Cleaning Up !!!"
 rm -rf /data/local/tmp/apps
