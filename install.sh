@@ -19,8 +19,9 @@ ls -la /data/local/tmp/apps
 echo "## Installing Apks !!!"
 for file in /data/local/tmp/apps/*.apk
 do
-    echo "Installing $file"
-    pm install $file
+    echo "Installing $file:"
+
+    pm install -r -d $file
 done
 
 echo "## Cleaning Up !!!"
