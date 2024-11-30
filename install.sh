@@ -7,7 +7,7 @@ fi
 echo "## Downloading Apks !!!"
 wget https://github.com/subekti404dev/androidtv-installer-script/raw/refs/heads/main/apps.zip -P /data/local/tmp/
 
-
+ls -lah /data/local/tmp
 
 echo "## Unzipping Apks !!!"
 mkdir /data/local/tmp/apps
