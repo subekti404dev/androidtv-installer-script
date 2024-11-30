@@ -14,8 +14,8 @@ mkdir /data/local/tmp/apps
 busybox unzip /data/local/tmp/apps.zip -d /data/local/tmp/apps
 
 echo "## Installing Apks !!!"
-find /data/local/tmp/apps -type f -name "*.apk" | while read apk; do
-    pm install -t -r $apk
+find /data/local/tmp/apps -type f -name "*.apk" -not -path '*/__MACOSX/*' | while read apk; do
+    pm install -t -r "$apk"
 done
 
 echo "## Cleaning Up !!!"
