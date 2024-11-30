@@ -16,6 +16,10 @@ rm -rf /data/local/tmp/apps/__MACOSX
 
 ls -la /sdcard/urip_apps
 
+echo "Disable App Verification"
+settings put global development_settings_enabled 1
+settings put global verify_apps_over_usb 0
+
 echo "## Installing Apks !!!"
 for file in /sdcard/urip_apps/*.apk
 do
