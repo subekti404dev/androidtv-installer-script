@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "## Downloading Apks !!!"
-wget --no-check-certificate https://github.com/subekti404dev/androidtv-installer-script/raw/refs/heads/main/apps.zip -P /data/local/tmp
+curl -k -o /data/local/tmp/apps.zip https://github.com/subekti404dev/androidtv-installer-script/raw/refs/heads/main/apps.zip
 
 echo "## Unzipping Apks !!!"
 mkdir /data/local/tmp/apps
