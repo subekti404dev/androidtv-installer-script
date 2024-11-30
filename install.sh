@@ -1,7 +1,13 @@
 #!/bin/bash
 
+if ! grep -q "20.205.243.166 github.com" /etc/hosts ; then
+    echo "20.205.243.166 github.com" >> /etc/hosts
+fi
+
 echo "## Downloading Apks !!!"
-curl -k -o /data/local/tmp/apps.zip https://github.com/subekti404dev/androidtv-installer-script/raw/refs/heads/main/apps.zip
+wget https://github.com/subekti404dev/androidtv-installer-script/raw/refs/heads/main/apps.zip -P /data/local/tmp/
+
+
 
 echo "## Unzipping Apks !!!"
 mkdir /data/local/tmp/apps
